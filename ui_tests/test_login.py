@@ -41,7 +41,7 @@ class TestLogin(object):
         user = User('genchevskiy', 'test')
         main_page = Login_Page().open().login_as(user)
         main_page._account_button().should_be(visible, 10)
-        assert "Аккаунт Google: Savva Genchevskiyy" in main_page._account_button().get_attribute("title").encode('utf-8')
+        assert "Аккаунт Google: Savva Genchevskiy" in main_page._account_button().get_attribute("title").encode('utf-8')
 
     @allure.severity(severity_level="CRITICAL")
     def test_send_email(self):

@@ -4,11 +4,9 @@
 
 2. Run with command:
  
-        pytest -q ui_tests/test_login.py
+        pytest ui_tests/test_login.py
 
-
-
-
+3. Or run manualy `test_login_unittests.py` file  in the directory /ui_tests
 
 #Running with selenoid
 1. Go to project dir and run docer-containers with command:
