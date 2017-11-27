@@ -1,6 +1,10 @@
 #Manual running
-    1. Go to project dir 
-    2. Run with command - pytest -q ui_tests/test_login.py
+
+1. Go to project dir 
+
+2. Run with command:
+ 
+        pytest -q ui_tests/test_login.py
 
 
 
