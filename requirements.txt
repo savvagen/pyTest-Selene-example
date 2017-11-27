@@ -1,0 +1,8 @@
+selene
+selenium
+pytest
+pytest-listener
+pytest-html
+webdriver_manager
+allure-pytest
+data

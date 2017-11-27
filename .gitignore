@@ -1,0 +1,15 @@
+
+#Будет удалено README.md
+#Будет удалено __pycache__/
+#Будет удалено allure-report/
+#Будет удалено allure-results/
+#Будет удалено entity/__init__.py
+#Будет удалено entity/__init__.pyc
+#Будет удалено entity/pages.pyc
+#Будет удалено entity/user.pyc
+#Будет удалено ui_tests/__init__.py
+#Будет удалено ui_tests/__init__.pyc
+
+.idea
+/allure-report
+/allure-results
