@@ -113,5 +113,5 @@ or
         
 Comments:
 
-        Video will be saving on test FATLED - in the folder : $USER_HOME/video   
+        Video of the FAILED test will be saving in the folder : $USER_HOME/video   
         Create this folder before running the tests in video_recording_mode
