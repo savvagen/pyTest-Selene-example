@@ -16,7 +16,7 @@ from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 
 
-class TestLogin(unittest.TestCase):
+class TestSmoke(unittest.TestCase):
 
 
     @classmethod

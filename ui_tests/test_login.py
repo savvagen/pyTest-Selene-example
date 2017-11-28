@@ -35,7 +35,7 @@ def set_up_test():
 
 @video_recorder(video(enabled=False))
 @pytest.mark.incremental
-class TestLogin(object):
+class TestSmoke(object):
 
 
     def test_positive_login(self):
