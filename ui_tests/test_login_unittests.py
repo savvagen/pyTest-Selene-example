@@ -16,7 +16,7 @@ from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 
 
-class TestSmoke(unittest.TestCase):
+class TestsEndToEnd(unittest.TestCase):
 
 
     @classmethod
