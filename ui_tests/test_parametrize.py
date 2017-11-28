@@ -29,7 +29,7 @@ def set_up_module():
 
 
 @pytest.mark.parametrize("email,message", Test_Data().emailData)
-@video()
+@video(enabled=False)
 def test_invalid_email_login(email, message):
     login_page = Login_Page().open()
     login_page._email_field().set_value(email).press_enter()

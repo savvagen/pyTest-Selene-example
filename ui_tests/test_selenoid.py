@@ -43,13 +43,11 @@ def set_up_test():
     Main_Page().log_out()
 
 
-
 def test_positive_login():
     user = User('genchevskiy', 'test')
     main_page = Login_Page().open().login_as(user)
     main_page._account_button().should_be(visible, 10)
     assert "Аккаунт Google: Savva Genchevskiy" in main_page._account_button().get_attribute("title").encode('utf-8')
-
 
 def test_send_email_object():
     user = User('genchevskiy', 'test')
@@ -58,7 +56,6 @@ def test_send_email_object():
     main_page.send_new_email().send_message_with(email)
     main_page._success_sent_link().should_be(visible)
     main_page.openInbox().emails_list._get(1)._subject().should_be(visible, 10).should_have(text(email.subject))
-
 
 def test_send_email():
     user = User('genchevskiy', 'test')

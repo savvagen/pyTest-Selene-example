@@ -33,7 +33,7 @@ def set_up_test():
     Main_Page().log_out()
 
 
-@video_recorder(video())
+@video_recorder(video(enabled=False))
 @pytest.mark.incremental
 class TestLogin(object):
 
