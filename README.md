@@ -113,5 +113,5 @@ or
         
 Comments:
 
-    Vide will be saving in the folder : $USER_HOME/video   
+    Vide will be saving on test FATLED - in the folder : $USER_HOME/video   
     Create this folder before running the tests in video_recording_mode
