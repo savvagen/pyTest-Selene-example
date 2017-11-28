@@ -35,8 +35,7 @@ class Login_Page(object):
         return s(email_error)
 
     def _password_error(self):
-        s(password_error)
-
+        return s(password_error)
 
     @allure.step("Open Login page")
     def open(self):
@@ -96,17 +95,16 @@ class Main_Page(object):
     def _email_list(self):
         return ss(email_list)
 
+    @allure.step("Open inbox messages")
     def openInbox(self):
         browser.open_url("/#inbox")
         return self
-
 
     def send_new_email(self):
         with allure.step("Press New Email button"):
             self._new_email_button().click()
             self.email_field.container.should_be(visible)
         return Email_Field()
-
 
     def log_out(self):
         with allure.step("Log Out"):
@@ -159,15 +157,12 @@ class Emails_List(object):
     def __init__(self):
         self.container = s(email_list_body)
 
-
     def _emails(self):
         return browser.all(email_list)
-
 
     def _should_have_size(self, number):
         self._emails().should_have(size(number))
         return self
-
 
     def _get(self, index):
         return Message(index-1)
@@ -179,8 +174,6 @@ class Message(object):
     def __init__(self, index):
         self.emails_list = Emails_List()
         self.email = Emails_List()._emails().__getitem__(index)
-
-
 
     def _subject(self):
         return self.email.s(email_subject)
