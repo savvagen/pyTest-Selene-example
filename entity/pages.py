@@ -5,10 +5,7 @@ from selene.api import *
 from selene.conditions import *
 from entity.email import Email
 from entity.user import User
-
-import pytest
 import allure
-import allure_pytest
 
 
 
@@ -51,11 +48,6 @@ class Login_Page(object):
         self._email_field().should_be(visible).set_value(user.email).press_enter()
         self._password_field().should_be(visible).set_value(user.password).press_enter()
         return Main_Page()
-
-
-
-
-
 
 
 
@@ -160,8 +152,6 @@ class Email_Field(object):
             self._send_button().click()
         return Main_Page()
 
-
-#---------------------------------------------------------------
 
 
 class Emails_List(object):

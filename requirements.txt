@@ -5,4 +5,4 @@ pytest-listener
 pytest-html
 webdriver_manager
 allure-pytest
-data
+test_recorder

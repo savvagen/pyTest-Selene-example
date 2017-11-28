@@ -12,7 +12,6 @@ from entity.email import Email
 from entity.pages import Main_Page
 from entity.pages import Login_Page
 import allure
-import html
 
 
 @pytest.yield_fixture(scope="session", autouse=True)

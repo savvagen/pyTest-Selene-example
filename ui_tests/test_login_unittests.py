@@ -1,20 +1,21 @@
 #! /usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import pytest
 from selene import browser, driver
 from selene import config
 from selene.browsers import BrowserName
 from selene.conditions import *
 
-from entity.user import User
 from entity.email import Email
 from entity.pages import Main_Page
 from entity.pages import Login_Page
+from entity.user import User
+
 import allure
 import unittest
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
+
 
 class TestLogin(unittest.TestCase):
 
@@ -29,7 +30,6 @@ class TestLogin(unittest.TestCase):
     def setUp(self):
         browser.driver().implicitly_wait(8)
         browser.driver().delete_all_cookies()
-
 
 
     def test_positive_login(self):
@@ -55,10 +55,8 @@ class TestLogin(unittest.TestCase):
         main_page.openInbox().emails_list._get(1)._subject().should_be(visible, 10).should_have(text(email.subject))
 
 
-
     def tearDown(self):
         Main_Page().log_out()
-
 
     @classmethod
     def tearDownClass(cls):
@@ -66,7 +64,6 @@ class TestLogin(unittest.TestCase):
         browser.close()
 
 
-if __name__ == "__main__":
+
+if __name__ == '__main__':
     unittest.main()
-
-

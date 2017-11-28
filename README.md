@@ -1,3 +1,14 @@
+#How to install all libraries
+1. Go to the projectDir and run the installation command for libraries that keeping in the `requirements.txt` file:
+
+   Windows:     
+            
+            pip install -r requirements.txt         (running from the "powe-shell" or "cmd" with admin mode)
+
+    Linux:
+    
+            sudo pip install -r requirements.txt
+
 #Manual running
 
 1. Go to project dir 
