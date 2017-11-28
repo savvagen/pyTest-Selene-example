@@ -10,7 +10,6 @@ from entity.email import Email
 from entity.pages import Main_Page
 from entity.pages import Login_Page
 from entity.user import User
-
 import allure
 import unittest
 from selenium import webdriver

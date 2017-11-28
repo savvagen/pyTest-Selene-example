@@ -58,3 +58,60 @@
 4. Generate allure report after tests-run with command:
     
         allure generate /path/to/project/PycharmProjects/selene-pytest-example/allure-results
+        
+# Video-recording mode
+
+1. Install recorder library:
+
+       pip install test_recorder  
+
+
+2. Install  FFMPEG:
+
+           sudo add-apt-repository ppa:mc3man/trusty-media  
+           sudo apt-get update  
+           sudo apt-get dist-upgrade  
+           sudo apt-get install ffmpeg  
+            
+3. Install Python-tk:
+
+           sudo apt-get install python-tk  
+           
+           
+4. Add responsive annotations to the tests or classes:
+
+        from test_recorder.decorator import video
+
+class TestGoogleSearch():
+
+    
+    
+    from test_recorder.decorator import video
+    ...
+    class TestGoogleSearch():
+    ...
+    @video()
+    def test_selene_demo(self):
+        google = GooglePage().open()
+        search = google.search("selene")
+        search.results[0].assure(text("In Greek"))
+        
+        
+or
+
+    from test_recorder.decorator import video_recorder, video
+    ...
+    @video_recorder(video())
+    ...
+    class TestGoogleSearch():
+    ...
+    def test_selene_demo(self):
+        google = GooglePage().open()
+        search = google.search("selene")
+        search.results[0].assure(text("In Greek"))
+        
+        
+Comments:
+
+    Vide will be saving in the folder : $USER_HOME/video   
+    Create this folder before running the tests in video_recording_mode

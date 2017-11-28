@@ -7,7 +7,7 @@ from selene import config
 from selene.browsers import BrowserName
 from selene.conditions import *
 from entity.pages import Login_Page
-
+from test_recorder.decorator import video, video_recorder
 from test_data.login_data import Test_Data
 
 
@@ -28,8 +28,8 @@ def set_up_module():
     browser.driver().delete_all_cookies()
 
 
-
 @pytest.mark.parametrize("email,message", Test_Data().emailData)
+@video()
 def test_invalid_email_login(email, message):
     login_page = Login_Page().open()
     login_page._email_field().set_value(email).press_enter()

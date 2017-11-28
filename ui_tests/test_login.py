@@ -12,6 +12,7 @@ from entity.email import Email
 from entity.pages import Main_Page
 from entity.pages import Login_Page
 import allure
+from test_recorder.decorator import video_recorder, video
 
 
 @pytest.yield_fixture(scope="session", autouse=True)
@@ -32,6 +33,7 @@ def set_up_test():
     Main_Page().log_out()
 
 
+@video_recorder(video())
 @pytest.mark.incremental
 class TestLogin(object):
 
