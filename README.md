@@ -1,4 +1,5 @@
-#How to install all libraries
+# How to install all libraries
+
 1. Go to the projectDir and run the installation command for libraries that keeping in the `requirements.txt` file:
 
    Windows(running from admin mode):     
@@ -9,7 +10,7 @@
     
             sudo pip install -r requirements.txt
 
-#Manual running
+# Manual running
 
 1. Go to project dir 
 
@@ -19,7 +20,9 @@
 
 3. Or run manualy `test_login_unittests.py` file  in the directory /ui_tests
 
-#Running with selenoid
+
+# Running with selenoid
+
 1. Go to project dir and run docer-containers with command:
     
        docker-compose -up d  
@@ -40,8 +43,8 @@
 
 
 
+# Running with Allure report
 
-#Running with Allure report
 
 1. Install Allure with npm
 
@@ -59,7 +62,9 @@
     
         allure generate /path/to/project/PycharmProjects/selene-pytest-example/allure-results
         
+        
 # Video-recording mode
+
 
 1. Install recorder library:
 
