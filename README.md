@@ -86,32 +86,32 @@
 4. Add responsive annotations to the tests or classes:
     
     
-    from test_recorder.decorator import video
-    ...
-    class TestGoogleSearch():
-    ...
-    @video()
-    def test_selene_demo(self):
-        google = GooglePage().open()
-        search = google.search("selene")
-        search.results[0].assure(text("In Greek"))
+        from test_recorder.decorator import video
+        ...
+        class TestGoogleSearch():
+        ...
+        @video()
+        def test_selene_demo(self):
+            google = GooglePage().open()
+            search = google.search("selene")
+            search.results[0].assure(text("In Greek"))
         
         
 or
 
-    from test_recorder.decorator import video_recorder, video
-    ...
-    @video_recorder(video())
-    ...
-    class TestGoogleSearch():
-    ...
-    def test_selene_demo(self):
-        google = GooglePage().open()
-        search = google.search("selene")
-        search.results[0].assure(text("In Greek"))
+        from test_recorder.decorator import video_recorder, video
+        ...
+        @video_recorder(video())
+        ...
+        class TestGoogleSearch():
+        ...
+        def test_selene_demo(self):
+            google = GooglePage().open()
+            search = google.search("selene")
+            search.results[0].assure(text("In Greek"))
         
         
 Comments:
 
-    Vide will be saving on test FATLED - in the folder : $USER_HOME/video   
-    Create this folder before running the tests in video_recording_mode
+        Video will be saving on test FATLED - in the folder : $USER_HOME/video   
+        Create this folder before running the tests in video_recording_mode
