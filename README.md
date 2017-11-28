@@ -1,9 +1,9 @@
 #How to install all libraries
 1. Go to the projectDir and run the installation command for libraries that keeping in the `requirements.txt` file:
 
-   Windows:     
+   Windows(running from admin mode):     
             
-            pip install -r requirements.txt         (running from the "powe-shell" or "cmd" with admin mode)
+            pip install -r requirements.txt  
 
     Linux:
     
@@ -79,11 +79,6 @@
            
            
 4. Add responsive annotations to the tests or classes:
-
-        from test_recorder.decorator import video
-
-class TestGoogleSearch():
-
     
     
     from test_recorder.decorator import video
