@@ -9,6 +9,7 @@ from selene.conditions import *
 from entity.pages import Login_Page
 from test_recorder.decorator import video, video_recorder
 from test_data.login_data import Test_Data
+from hamcrest import *
 
 
 
@@ -33,5 +34,6 @@ def set_up_module():
 def test_invalid_email_login(email, message):
     login_page = Login_Page().open()
     login_page._email_field().set_value(email).press_enter()
-    assert message in login_page._email_error().should_be(visible).text.encode('utf-8')
+    login_page._email_error().should_be(visible)
+    assert_that(login_page._email_error().text.encode('utf-8'), contains_string(message))
 

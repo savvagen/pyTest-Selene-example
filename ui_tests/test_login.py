@@ -1,18 +1,22 @@
 #! /usr/bin/env python
 # -*- coding: utf-8 -*-
 
+
 import pytest
 from selene import browser
 from selene import config
 from selene.browsers import BrowserName
 from selene.conditions import *
-
+from hamcrest import *
 from entity.user import User
 from entity.email import Email
 from entity.pages import Main_Page
 from entity.pages import Login_Page
 import allure
 from test_recorder.decorator import video_recorder, video
+
+
+
 
 
 @pytest.yield_fixture(scope="session", autouse=True)
@@ -39,10 +43,11 @@ class TestsEndToEnd(object):
 
 
     def test_positive_login(self):
+
         user = User('genchevskiy', 'test')
         main_page = Login_Page().open().login_as(user)
         main_page._account_button().should_be(visible, 10)
-        assert "Аккаунт Google: Savva Genchevskiy" in main_page._account_button().get_attribute("title").encode('utf-8')
+        assert_that(main_page._account_button().get_attribute('title').encode('utf-8'), contains_string('Аккаунт Google: Savva Genchevskiy'))
 
     @allure.severity(severity_level="CRITICAL")
     def test_send_email(self):

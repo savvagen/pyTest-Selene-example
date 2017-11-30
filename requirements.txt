@@ -1,3 +1,5 @@
+setuptools
+wheel
 selene
 selenium
 pytest
@@ -9,3 +11,4 @@ allure-pytest
 test_recorder
 docker-compose
 requests
+PyHamcrest
