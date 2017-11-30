@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/pyTest-selene-example.iml" filepath="$PROJECT_DIR$/.idea/pyTest-selene-example.iml" />
       <module fileurl="file://$PROJECT_DIR$/../selene-pytest-example/.idea/selene-pytest-example.iml" filepath="$PROJECT_DIR$/../selene-pytest-example/.idea/selene-pytest-example.iml" />
     </modules>
   </component>
