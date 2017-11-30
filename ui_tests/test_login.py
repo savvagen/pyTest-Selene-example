@@ -17,7 +17,7 @@ from test_recorder.decorator import video_recorder, video
 
 @pytest.yield_fixture(scope="session", autouse=True)
 def set_up_class():
-    # prepare something ahead of all ui_tests
+    #prepare something ahead of all ui_tests
     config.browser_name = BrowserName.CHROME
     config.base_url = "https://mail.google.com/mail"
     config.timeout = 7
@@ -59,6 +59,8 @@ class TestsEndToEnd(object):
         main_page.send_new_email().send_message_with(email)
         main_page._success_sent_link().should_be(visible)
         main_page.openInbox().emails_list._get(1)._subject().should_be(visible, 10).should_have(text(email.subject))
+
+
 
 
 

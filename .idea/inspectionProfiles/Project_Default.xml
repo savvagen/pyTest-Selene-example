@@ -31,6 +31,8 @@
         <list>
           <option value="entity.user.last" />
           <option value="allure.attach_type" />
+          <option value="api_tests.test_selenoid_containers.DockerCompose" />
+          <option value="api_tests.test_selenoid_containers.CHROME" />
         </list>
       </option>
     </inspection_tool>

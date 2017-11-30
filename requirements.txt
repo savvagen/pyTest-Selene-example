@@ -3,6 +3,9 @@ selenium
 pytest
 pytest-listener
 pytest-html
+testcontainers
 webdriver_manager
 allure-pytest
 test_recorder
+docker-compose
+requests

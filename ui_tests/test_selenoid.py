@@ -33,7 +33,6 @@ def set_up_class():
     browser.close()
 
 
-
 @pytest.yield_fixture(autouse=True)
 def set_up_test():
     browser.driver().implicitly_wait(8)
